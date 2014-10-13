@@ -41,6 +41,10 @@
 	
 }
 
+.twitter-share-button[style] { 
+    margin-left:22px;
+}
+
 
 .button-success,
         .button-error,
