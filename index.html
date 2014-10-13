@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    
+<!-- Copyrights 2014 (c). Ali Gajani All Rights Reserved -->    
+
+<!-- Meta Tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tempo Tuner | A Side Project by Ali Gajani">
+<link rel="image_src" href="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-ash2/598692_355713191185746_795640262_n.jpg" / >
+    
+<!-- Title Tag -->
+<title>Tempo Tuner by Ali Gajani</title>
+<meta name="title" content="Tempo Tuner by Ali Gajani " />
+
+    
+<!-- Open Graph -->
+<meta property="fb:admins" content="100002412051139" />
+<meta property="fb:app_id" content="463699013697353"/>  
+<meta property="og:title" content="Tempo Tuner by Ali Gajani" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://www.aligajani.github.io/side-project-tempo-tuner" />
+<meta property="og:image" content="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-ash2/598692_355713191185746_795640262_n.jpg" />
+<meta property="og:description" content="Tempo Tuner | A Side Project by Ali Gajani" />
+<meta property="og:site_name" content="Tempo Tuner by Ali Gajani"/>
+    
+<!-- Style Sheets -->
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+<link rel="stylesheet" href="style.css">
+    
+<!-- IE Crap -->
+    
+<!--[if lte IE 8]><link rel="stylesheet" href="http://purecss.io/combo/1.17.16?/css/layouts/side-menu-old-ie.css"><![endif]-->
+<!--[if gt IE 8]><!--><link rel="stylesheet" href="http://purecss.io/combo/1.17.16?/css/layouts/side-menu.css"><!--<![endif]-->
+<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script><![endif]-->
+
+<!-- Sound Cloud API -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://connect.soundcloud.com/sdk.js"></script>
+<script src="http://w.soundcloud.com/player/api.js"></script>
+
+
+</head>
+<body>
+
+
+<div id="layout">
+    
+    <!-- Github Ribbon -->
+    <a href="https://github.com/aligajani"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+    
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <!-- Menu -->
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <a class="pure-menu-heading" href="/">Tempo Tuner</a>
+                
+            <br></br>
+        
+        <!-- FOLLOW -->
+            <iframe src="//www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2Faligajani&amp;width&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;show_faces=true&amp;appId=463699013697353" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px; margin-left:22px; margin-bottom:10px;" allowTransparency="true"></iframe>
+        
+             
+        <!-- TWEET -->
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="aligajani" data-size="large" data-hashtags="javascriptjquerysoundcloudapihackathon">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        
+        <br></br>
+            
+     <!-- NAVIGATION -->
+    
+            <ul class="text-center">
+                <li><a href="#"> Source Code</a></li>
+                 <li class="status"><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>How high are you?</h1>
+            <h2>Play random tunes based on tempo.</h2>
+        </div>
+
+        <div class="content">
+            
+            <div class="now_playing">
+            </div>
+
+            <!-- Magic Start -->
+            <div class="hide-it" id="track"></div>
+            <!-- Magic Stop -->
+            
+            
+    <!-- Error Message -->      
+    <p class="error"></p>
+          
+            
+    <div class="pure-g">
+        
+        <!-- Column A -->
+        
+        <div class="pure-u-2-5 text-center">
+        <!-- Shizzle Buttons -->
+            <button id="low" class="button-success pure-button">Low</button>
+            <button id="medium" class="button-secondary pure-button">Medium</button>
+            <button id="high" class="button-warning pure-button">High</button>
+            <!-- It ends -->  
+            
+             <!-- By Line Text -->
+            <h2 class="content-subhead">Tempo Tuner</h2>
+            <p class="text-center">
+                A side project by Ali Gajani.</br>
+        <span style="color:tomato;"> Be patient on first load. </span>
+            </p>
+            
+        
+            
+           <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Faligajani.github.io%2Fside-project-tempo-tuner&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=463699013697353" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+            
+                      <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/aligajani" data-style="mega">Follow @aligajani</a>
+            
+            <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/aligajani/side-project-tempo-tuner" data-icon="octicon-eye" data-style="mega">Watch</a>
+            
+            <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/aligajani/side-project-tempo-tuner" data-icon="octicon-star" data-style="mega">Star</a>
+
+ 
+        </div>
+        
+        <!-- Column B -->
+        
+        <div class="pure-u-3-5">
+            
+            <img class="art" />
+    
+        </div>
+ 
+ 
+    </div>
+     
+      
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="http://purecss.io/combo/1.17.16?/js/ui.js"></script>
+<script src="tempotuner.js"></script>
+
+<!-- Place this tag right after the last button or just before your close body tag. -->
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+</html>
