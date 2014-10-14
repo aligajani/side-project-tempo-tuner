@@ -44,7 +44,7 @@ $(document).ready(function () {
         $('.art').attr("src", "http://i.imgur.com/QszPWIq.gif");
         
         //specify low bpm genres
-        var l = [ "ambient" , "classical", "soul", "folk",  "piano", "country", "reggae", ];
+        var l = [ "ambient" , "classical", "soul", "folk",  "piano", "country", "reggae" ];
         
         //convert to list
         var low = l.join(",")
