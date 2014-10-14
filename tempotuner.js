@@ -29,7 +29,7 @@ THE SOFTWARE.
 $(document).ready(function () {  
 
     // The SoundCloud API Key 
-    var client_id = '7182630dc6a6fc8aa606657648545826';
+    var client_id = '807d68ce053dcefc802226c3b1667560';
     
     // Launch the SoundCloud Application
     SC.initialize({
