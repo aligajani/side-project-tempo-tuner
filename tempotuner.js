@@ -127,36 +127,14 @@ $(document).ready(function () {
 
     // Play a tune using the SC.oEmbed
     function playTune(track, t) {
-
-
-        // This works on Desktops only
-        // SC.oEmbed(track.permalink_url, 
-        // {
-        //     auto_play: true
-        // }, 
+     
+        SC.oEmbed(track.permalink_url, 
+        {
+            auto_play: true
+        }, 
         
-        // //load it up in the specific div and hide it
-        // document.getElementById("track"));
-
-        // This works on iPhones and Desktops
-        var mp3 = "https://api.soundcloud.com/tracks/" + track.id + "/stream?client_id=" + client_id;
-
-        $('#track').empty();
-        var audioPlayer = new Audio();
-        audioPlayer.controls="controls";
-        audioPlayer.src= mp3;
-        document.getElementById("track").appendChild(audioPlayer);
-        audioPlayer.play();
-
-
-        // // Add source to audio tag
-        // $('#track').attr("src", mp3);
-
-        // // Get the track tag where audio resides
-        // var thissound=document.getElementById("track");
-        
-        // // Now play it
-        // thissound.play();
+        //load it up in the specific div and hide it
+        document.getElementById("track"));
         
         // When Sound Manager is ready give output
         SC.whenStreamingReady(function () { 
