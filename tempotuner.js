@@ -93,9 +93,19 @@ $(document).ready(function () {
     
     // Pick a random tune based on parameters
     function pickRandom(g, t) {
+
+        //time window 1 day old
+        var d = new Date();
+        
+        //set date
+        d.setDate(d.getDate() - 1);
+
+        //prepare date
+        var date_sc = (d.getFullYear()) + "-" + (d.getMonth()+1) + "-" + (d.getDate()) + " " + (d.getHours()) + ":" + (d.getMinutes()) + ":" + (d.getSeconds()); //yyyy-mm-dd hh:mm:ss
+
        
-        //pick 200 at a time with specific genres parameters
-        SC.get('/tracks', { genres: g , limit: 200 }, function (tracks, error) { 
+        //pick 10 at a time with parameters
+        SC.get('/tracks', { genres: g , limit: 10, created_at: { from: date_sc } }, function (tracks, error) { 
             
             //if track array is empty
             if ((tracks.length == 0)) {
