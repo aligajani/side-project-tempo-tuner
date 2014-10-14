@@ -141,14 +141,22 @@ $(document).ready(function () {
         // This works on iPhones and Desktops
         var mp3 = "https://api.soundcloud.com/tracks/" + track.id + "/stream?client_id=" + client_id;
 
-        // Add source to audio tag
-        $('#track').attr("src", mp3);
+        $('#track').empty();
+        var audioPlayer = new Audio();
+        audioPlayer.controls="controls";
+        audioPlayer.src= mp3;
+        document.getElementById("track").appendChild(audioPlayer);
+        audioPlayer.play();
 
-        // Get the track tag where audio resides
-        var thissound=document.getElementById("track");
+
+        // // Add source to audio tag
+        // $('#track').attr("src", mp3);
+
+        // // Get the track tag where audio resides
+        // var thissound=document.getElementById("track");
         
-        // Now play it
-        thissound.play();
+        // // Now play it
+        // thissound.play();
         
         // When Sound Manager is ready give output
         SC.whenStreamingReady(function () { 
