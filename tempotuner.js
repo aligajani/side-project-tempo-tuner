@@ -45,9 +45,9 @@ $(document).ready(function () {
         
         //specify low bpm genres
         var l = [ "ambient" , "classical", "soul", "folk",  "piano", "country", "reggae" ];
-        
-        //convert to list
-        var low = l.join(",")
+
+        //randomize
+        var low = l[Math.floor(Math.random() * l.length)];
         
         //now go and play a random tune
         pickRandom(low, "Low");
@@ -64,8 +64,8 @@ $(document).ready(function () {
         //specify medium bpm genres
         var m = [ "pop", "alternative rock", "jazz", "latin", "r&b", "world"  ];
         
-        //convert to list
-        var medium = m.join(",")
+        //randomize
+        var medium = m[Math.floor(Math.random() * m.length)];
         
         //now go and play a random tune
         pickRandom(medium, "Medium");
@@ -81,8 +81,8 @@ $(document).ready(function () {
          //specify high bpm genres
         var h = [ "rock", "techno", "electronic", "trance", "dance", "house", "metal", "rap" ];
         
-        //convert to list
-        var high = h.join(",")
+         //randomize
+        var high = h[Math.floor(Math.random() * h.length)];
         
         //now go and play a random tune
         pickRandom(high, "High");
