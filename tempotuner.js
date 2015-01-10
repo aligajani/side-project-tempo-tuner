@@ -29,7 +29,7 @@ THE SOFTWARE.
 $(document).ready(function () {  
 
     // The SoundCloud API Key 
-    var client_id = '807d68ce053dcefc802226c3b1667560';
+    var client_id = '59b536415068dcabf483e92f0f8d7810';
     
     // Launch the SoundCloud Application
     SC.initialize({
@@ -104,8 +104,11 @@ $(document).ready(function () {
         var date_sc = (d.getFullYear()) + "-" + (d.getMonth()+1) + "-" + (d.getDate()) + " " + (d.getHours()) + ":" + (d.getMinutes()) + ":" + (d.getSeconds()); //yyyy-mm-dd hh:mm:ss
 
        
+        // created_at: { from: date_sc }
+
         //pick 10 at a time with parameters
-        SC.get('/tracks', { genres: g , limit: 10, created_at: { from: date_sc } }, function (tracks, error) { 
+        SC.get('/tracks', { genres: g , limit: 10,  }, function (tracks, error) { 
+
             
             //if track array is empty
             if ((tracks.length == 0)) {
